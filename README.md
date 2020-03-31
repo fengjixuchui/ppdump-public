@@ -6,6 +6,11 @@ Protected Process (Light) on the latest iterations of Microsoft Windows has beco
 
 Using these privileged handles, I was able to successfully "APC Bomb" each individual threads until it reached an altertable state by using QueueUserAPC, and Stomping / Resuming the threads a multitude of times. 
 
+### Versions Tested
+  - Windows 10 1909 x64 (SUCCESS!)
+  - Windows 10 1903 x64 (SUCCESS!)
+  - Server 2012 (FAILURE: Output successful, yet minidump doesnt exist. weird. TODO)
+
 ### Build
 
 The ppdump module can be built using `Make` and `Mingw-W64`. Simply download the make build system using your favorite package manager, as well the Mingw compiler package, and then run `make`. 
